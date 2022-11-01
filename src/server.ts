@@ -1,11 +1,10 @@
 import express from "express";
+import { router } from "./routes";
 
 const app = express();
 const port = 3000;
 
-app.get("/", (_, res) => {
-  return res.send("Hello World");
-});
+app.use("/", router);
 
 app.listen(port, () => {
   console.log("Start server!");
