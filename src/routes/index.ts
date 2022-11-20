@@ -1,12 +1,12 @@
 import { Router } from "express";
 import { playersRouter } from "./players";
 import { clubsRouter } from "./clubs";
-import { tournamentsRouter } from "./tournaments";
+import { competitionsRouter } from "./competitions";
 
 const router = Router();
 
 router.use("/players", playersRouter);
 router.use("/clubs", clubsRouter);
-router.use("/tournaments", tournamentsRouter);
+router.use("/competitions", competitionsRouter);
 
 export { router };

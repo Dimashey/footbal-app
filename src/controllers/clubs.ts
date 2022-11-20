@@ -1,8 +1,13 @@
 import { Request, Response } from "express";
+import { clubsService } from "../services";
 
 class ClubsController {
-  async getClub(_: Request, res: Response) {
-    return res.json({ name: "Real Madrid" });
+  async getClub(req: Request, res: Response) {
+    const { id } = req.params;
+
+    const club = await clubsService.getClub(id);
+
+    res.json(club);
   }
 }
 

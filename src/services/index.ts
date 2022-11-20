@@ -1,0 +1,1 @@
+export { clubsService } from "./clubs";
