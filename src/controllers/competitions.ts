@@ -9,6 +9,22 @@ class CompetitionsController {
 
     return res.json(competition);
   }
+
+  async getClubs(req: Request, res: Response) {
+    const { id } = req.params;
+
+    const clubs = await competitionsService.getClubs(id);
+
+    return res.json(clubs);
+  }
+
+  async getPlayers(req: Request, res: Response) {
+    const { id } = req.params;
+
+    const players = await competitionsService.getPlayers(id);
+
+    return res.json(players);
+  }
 }
 
 export const competitionsController = new CompetitionsController();
