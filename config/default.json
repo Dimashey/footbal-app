@@ -1,0 +1,9 @@
+{
+  "db": {
+    "user": "postgres",
+    "password": "dima123",
+    "host": "localhost",
+    "port": 5432,
+    "name": "football_app"
+  }
+}
